@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import fire from '../services/firebase'
 
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     backgroundColor: '#9400d3',
   },
-  form: {
+  div: {
     width: '100%',
     marginTop: theme.spacing(1),
   },
@@ -45,12 +45,17 @@ export default function SignIn() {
   const classes = useStyles();
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const navigate = useNavigate();
   
 
   const signin = () => {
     fire.auth().signInWithEmailAndPassword(email, password).then(user => {
       console.log(user)
-		})
+      navigate('/userpage');
+		}).catch((error) => {
+      var errorMessage = error.message;
+      console.log(errorMessage)
+    });
   }
 
   return (
@@ -64,7 +69,7 @@ export default function SignIn() {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <form className={classes.form} noValidate>
+        <div className={classes.div} noValidate>
           <TextField
             variant="outlined"
             margin="normal"
@@ -111,7 +116,7 @@ export default function SignIn() {
               </Link>
             </Grid>
           </Grid>
-        </form>
+        </div>
       </div>
     </Container>
     <Footer/>

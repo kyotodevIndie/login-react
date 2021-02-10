@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import fire from '../services/firebase';
 
@@ -47,12 +47,21 @@ export default function SignUp() {
   const classes = useStyles();
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const navigate = useNavigate();
   
   const signup = () => {
     fire.auth().createUserWithEmailAndPassword(email, password).then(user => {
       console.log(user)
+      navigate('/userpage');
     })
-  }
+    .catch((error) => {
+      var errorMessage = error.message;
+      console.log(errorMessage)
+  })
+  } 
+
+
+
   return (
     <>
     <Container component="main" maxWidth="xs">
@@ -64,7 +73,7 @@ export default function SignUp() {
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>
-        <form className={classes.form} noValidate>
+        <div className={classes.form} noValidate>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -138,7 +147,7 @@ export default function SignUp() {
               </Link>
             </Grid>
           </Grid>
-        </form>
+        </div>
       </div>
     </Container>
         <Footer />
