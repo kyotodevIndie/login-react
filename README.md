@@ -1,8 +1,4 @@
  <p align="center">
- <a href="https://github.com/kyotodevindie">
-    <img src="readme-assets/logo.png" alt="Logo" width="95" height="100">
-  </a>
-</p>
   <h1 align="center">Login React With FireBase</h1>
 
   <p align="center">
@@ -11,54 +7,37 @@
     <a href="https://login-react-teal.vercel.app/">View Demo</a>
 </p>
 
-## Prints
-
-<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
- 
-<img src="https://lh3.googleusercontent.com/pw/ACtC-3ebe4Id7dghkea4Wo-WrCv-q882XnVTYVCaIVNT1nySSR64NhXb68QYIqNToPw_9MmctmOwnf5xEuW1SXYBAlSLRUVb-hEWuoq9BXppc4ndkGnWl4qBzpht3XYBP88cYN4D6rtElOA559OjNgGX56Lg=w1894-h896-no?authuser=0"  alt="print 1" width="600">
-<img src="https://lh3.googleusercontent.com/pw/ACtC-3c14MlQ9kX7cAQ7LmHWn2y6W8U7pLZMg-OOAOFWBQRVw_0lRq_O7ZvL3jHy3eVbfAzhKtlhgcl7k2rYlzxqgX2HqOEwJ-UiF9k_McU9Ief5RxVlZxYYFSWSlDCPoZxmskB_Z3aQOB4HQvtVceZkdPFJ=w1897-h901-no?authuser=0"  alt="print 2" width="600">
-<img src="https://lh3.googleusercontent.com/pw/ACtC-3dUfQzu_lIJiX8Ryf-M6I3mB8qgKDt485FdFXBT7Y5O5Je9x8BWBWFAzCocgqWzQCAK2zuT0oAU7RBTeROpYrYzEiwcMnC7DKPHN9bbH3q-kc50E1KFuJ1l8l0HoSMlCfMxGUfpMBWBiY4ATCVBD10V=w1897-h907-no?authuser=0"  alt="print 3" width="600">
-<img src="https://lh3.googleusercontent.com/pw/ACtC-3ehDLqxkqib9EtrKEEURYkw40V0Jp9MtWpgM18q6c9AqZTDGfcFsdOs6TVH02yLLUM-fa67kuSovkOMUZ1i2hJcgxAeHYl-f2rNUSmq5mlTAn7YKgoJR9-hCvcLPTmwyvhg2EQ7liQf-jmIE2kbjWE0=w1897-h899-no?authuser=0"  alt="print 3" width="600">
 
 </div>
 
 ### Built With
 
 - [React](https://pt-br.reactjs.org/)
-- [Next](https://nextjs.org/)
-- [Ant Design](https://ant.design/)
-- [Less Css](http://lesscss.org/)
+- [Material Ui](https://material-ui.com/pt/)
+- [Firebase](https://firebase.google.com/)
 
 ### Installation
 
 1. Clone the repo
 
 ```sh
-git clone https://github.com/kyotodevIndie/anime-catalog-hero.git
+git clone https://github.com/kyotodevIndie/login-react.git
 ```
 
-3. Install the packages using NPM or Yarn
+3. Install the packages using Yarn (or NPM)
 
 ```sh
 yarn
 ```
-
-```sh
-npm install
-```
 4. run the project
 
 ```sh
-yarn dev
+yarn start
 ```
 
-```sh
-npm run dev
-```
+5. Happy coding!
 
-5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-6. Happy coding!
+P.S. : To use this code in your project you need to go to the firebase console and get the SDK from web
 
 <!-- CONTRIBUTING -->
 
